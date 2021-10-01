@@ -1,0 +1,15 @@
+C:\Users\ghidyon\source\repos\CompanyEmployees\Contracts\bin\Debug\net5.0\Contracts.deps.json
+C:\Users\ghidyon\source\repos\CompanyEmployees\Contracts\bin\Debug\net5.0\Contracts.dll
+C:\Users\ghidyon\source\repos\CompanyEmployees\Contracts\bin\Debug\net5.0\ref\Contracts.dll
+C:\Users\ghidyon\source\repos\CompanyEmployees\Contracts\bin\Debug\net5.0\Contracts.pdb
+C:\Users\ghidyon\source\repos\CompanyEmployees\Contracts\obj\Debug\net5.0\Contracts.csproj.AssemblyReference.cache
+C:\Users\ghidyon\source\repos\CompanyEmployees\Contracts\obj\Debug\net5.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ghidyon\source\repos\CompanyEmployees\Contracts\obj\Debug\net5.0\Contracts.AssemblyInfoInputs.cache
+C:\Users\ghidyon\source\repos\CompanyEmployees\Contracts\obj\Debug\net5.0\Contracts.AssemblyInfo.cs
+C:\Users\ghidyon\source\repos\CompanyEmployees\Contracts\obj\Debug\net5.0\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\ghidyon\source\repos\CompanyEmployees\Contracts\obj\Debug\net5.0\Contracts.dll
+C:\Users\ghidyon\source\repos\CompanyEmployees\Contracts\obj\Debug\net5.0\ref\Contracts.dll
+C:\Users\ghidyon\source\repos\CompanyEmployees\Contracts\obj\Debug\net5.0\Contracts.pdb
+C:\Users\ghidyon\source\repos\CompanyEmployees\Contracts\bin\Debug\net5.0\Entities.dll
+C:\Users\ghidyon\source\repos\CompanyEmployees\Contracts\bin\Debug\net5.0\Entities.pdb
+C:\Users\ghidyon\source\repos\CompanyEmployees\Contracts\obj\Debug\net5.0\Contracts.csproj.CopyComplete
