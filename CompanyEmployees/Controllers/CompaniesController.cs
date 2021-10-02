@@ -8,6 +8,7 @@ using LoggerService;
 using Contracts;
 using Entities.DataTransferObjects;
 using AutoMapper;
+using Entities.Models;
 
 namespace CompanyEmployees.Controllers
 {
@@ -38,20 +39,34 @@ namespace CompanyEmployees.Controllers
             
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "CompanyById")]
         public IActionResult GetCompany(Guid id)
         {
             var company = _repository.Company.GetCompany(id, trackChanges: false);
             var companyDto = _mapper.Map<CompanyDto>(company);
+         
             return Ok(companyDto);
-            //if (company == null)
-            //{
-            //    _logger.LogInfo($"Comany with id: {id} doesn't exist in the database");
-            //    return NotFound();
-            //} else
-            //{
-                
-            //}
         }
+
+        [HttpPost]
+        public IActionResult CreateCompany([FromBody]CompanyForCreationDto company)
+        {
+            if (company == null)
+            {
+                _logger.LogError("CompanyForCreationDto object sent from client is null");
+                return BadRequest("CompanyForCreationDto object is null");
+            }
+
+            var companyEntity = _mapper.Map<Company>(company);
+
+            _repository.Company.CreateCompany(companyEntity);
+            _repository.Save();
+
+            var companyToReturn = _mapper.Map<CompanyDto>(companyEntity);
+
+            return CreatedAtRoute("CompanyById", new { id = companyToReturn.Id }, companyToReturn);
+        }
+
+
     }
 }
