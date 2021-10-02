@@ -38,8 +38,10 @@ namespace CompanyEmployees
             
             services.AddControllers(config =>
             {
-                config.RespectBrowserAcceptHeader = true; 
-            }).AddXmlDataContractSerializerFormatters();
+                config.RespectBrowserAcceptHeader = true;
+                config.ReturnHttpNotAcceptable = true;
+            }).AddXmlDataContractSerializerFormatters()
+            .AddCustomCSVFormatter();
 
             services.AddAutoMapper(typeof(Startup));
         }

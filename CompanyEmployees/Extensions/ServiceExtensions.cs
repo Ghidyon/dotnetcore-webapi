@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Repository;
+using CompanyEmployees.Formatter;
 
 namespace CompanyEmployees.Extensions
 {
@@ -46,6 +47,9 @@ namespace CompanyEmployees.Extensions
         {
             services.AddScoped<IRepositoryManager, RepositoryManager>();
         }
-            
+
+        public static IMvcBuilder AddCustomCSVFormatter(this IMvcBuilder builder) =>
+            builder.AddMvcOptions(config => 
+                config.OutputFormatters.Add(new CsvOutputFormatter()));
     }
 }
