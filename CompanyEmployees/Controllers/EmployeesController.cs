@@ -53,7 +53,7 @@ namespace CompanyEmployees.Controllers
                 return NotFound();
             }
 
-            var employee = _repository.Employee.GetEmployee(companyId, id, trackChaanges: false);
+            var employee = _repository.Employee.GetEmployee(companyId, id, trackChanges: false);
 
             if (employee == null)
             {
@@ -94,6 +94,30 @@ namespace CompanyEmployees.Controllers
                     id = employeeToReturn.Id
                 },
                 employeeToReturn);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteEmployeeForCompany(Guid companyId, Guid id)
+        {
+            var company = _repository.Company.GetCompany(companyId, trackChanges: false);
+            if (company is null)
+            {
+                _logger.LogInfo($"Company with id: {companyId} doesn't exist in the database.");
+                return NotFound();
+            }
+
+            var employeeforCompany = _repository.Employee.GetEmployee(companyId, id, trackChanges: false);
+
+            if (employeeforCompany is null)
+            {
+                _logger.LogInfo($"Employee with id: {id} doesn't exist in the database.");
+                return NotFound();
+            }
+
+            _repository.Employee.DeleteEmployee(employeeforCompany);
+            _repository.Save();
+
+            return NoContent();
         }
     }
 }
