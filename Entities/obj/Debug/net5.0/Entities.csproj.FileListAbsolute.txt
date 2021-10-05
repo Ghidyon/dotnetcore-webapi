@@ -1,4 +1,6 @@
 C:\Users\ghidyon\source\repos\CompanyEmployees\Entities\bin\Debug\net5.0\Entities.deps.json
+C:\Users\ghidyon\source\repos\CompanyEmployees\Entities\bin\Debug\net5.0\Entities.runtimeconfig.json
+C:\Users\ghidyon\source\repos\CompanyEmployees\Entities\bin\Debug\net5.0\Entities.runtimeconfig.dev.json
 C:\Users\ghidyon\source\repos\CompanyEmployees\Entities\bin\Debug\net5.0\Entities.dll
 C:\Users\ghidyon\source\repos\CompanyEmployees\Entities\bin\Debug\net5.0\ref\Entities.dll
 C:\Users\ghidyon\source\repos\CompanyEmployees\Entities\bin\Debug\net5.0\Entities.pdb
@@ -10,6 +12,4 @@ C:\Users\ghidyon\source\repos\CompanyEmployees\Entities\obj\Debug\net5.0\Entitie
 C:\Users\ghidyon\source\repos\CompanyEmployees\Entities\obj\Debug\net5.0\Entities.dll
 C:\Users\ghidyon\source\repos\CompanyEmployees\Entities\obj\Debug\net5.0\ref\Entities.dll
 C:\Users\ghidyon\source\repos\CompanyEmployees\Entities\obj\Debug\net5.0\Entities.pdb
-C:\Users\ghidyon\source\repos\CompanyEmployees\Entities\bin\Debug\net5.0\Entities.runtimeconfig.json
-C:\Users\ghidyon\source\repos\CompanyEmployees\Entities\bin\Debug\net5.0\Entities.runtimeconfig.dev.json
 C:\Users\ghidyon\source\repos\CompanyEmployees\Entities\obj\Debug\net5.0\Entities.genruntimeconfig.cache
