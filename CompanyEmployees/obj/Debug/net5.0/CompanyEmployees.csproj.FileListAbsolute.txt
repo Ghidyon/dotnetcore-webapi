@@ -83,3 +83,6 @@ C:\Users\ghidyon\source\repos\CompanyEmployees\CompanyEmployees\obj\Debug\net5.0
 C:\Users\ghidyon\source\repos\CompanyEmployees\CompanyEmployees\obj\Debug\net5.0\ref\CompanyEmployees.dll
 C:\Users\ghidyon\source\repos\CompanyEmployees\CompanyEmployees\obj\Debug\net5.0\CompanyEmployees.pdb
 C:\Users\ghidyon\source\repos\CompanyEmployees\CompanyEmployees\obj\Debug\net5.0\CompanyEmployees.genruntimeconfig.cache
+C:\Users\ghidyon\source\repos\CompanyEmployees\CompanyEmployees\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\ghidyon\source\repos\CompanyEmployees\CompanyEmployees\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\ghidyon\source\repos\CompanyEmployees\CompanyEmployees\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
