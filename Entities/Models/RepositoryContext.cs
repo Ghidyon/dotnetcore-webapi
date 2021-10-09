@@ -13,7 +13,6 @@ namespace Entities.Models
         public RepositoryContext(DbContextOptions options)
             : base(options)
         {
-
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

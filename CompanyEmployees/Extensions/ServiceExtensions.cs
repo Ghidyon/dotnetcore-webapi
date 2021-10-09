@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Repository;
 using CompanyEmployees.Formatter;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CompanyEmployees.Extensions
 {
@@ -51,5 +52,11 @@ namespace CompanyEmployees.Extensions
         public static IMvcBuilder AddCustomCSVFormatter(this IMvcBuilder builder) =>
             builder.AddMvcOptions(config => 
                 config.OutputFormatters.Add(new CsvOutputFormatter()));
+
+        public static void ConfigureApiBehavior(this IServiceCollection services) =>
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
     }
 }
