@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.HttpOverrides;
 using System.IO;
 using NLog;
 using Contracts;
+using CompanyEmployees.ActionFilters;
 
 namespace CompanyEmployees
 {
@@ -38,11 +39,15 @@ namespace CompanyEmployees
 
             services.AddControllers(config =>
             {
+                //config.Filters.Add(new GlobalFilterExample());
                 config.RespectBrowserAcceptHeader = true;
                 config.ReturnHttpNotAcceptable = true;
             }).AddNewtonsoftJson()
             .AddXmlDataContractSerializerFormatters()
             .AddCustomCSVFormatter();
+
+            //services.AddScoped<ValidationFilterAttribute>();
+            services.AddScoped<ValidateCompanyExistsAttribute>();
 
             services.AddAutoMapper(typeof(Startup));
 

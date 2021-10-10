@@ -8,6 +8,7 @@ using Contracts;
 using AutoMapper;
 using Entities.DataTransferObjects;
 using Microsoft.AspNetCore.JsonPatch;
+using CompanyEmployees.ActionFilters;
 
 namespace CompanyEmployees.Controllers
 {
@@ -67,21 +68,9 @@ namespace CompanyEmployees.Controllers
         }
 
         [HttpPost]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> CreateEmployee(Guid companyId, [FromBody]EmployeeForCreationDto employee)
         {
-            if (employee == null)
-            {
-                _logger.LogError("EmployeeForCreationDto object sent from client is null.");
-                return BadRequest("EmployeeForCreationDto object is null");
-            }
-
-            if (!ModelState.IsValid)
-            {
-                ModelState.AddModelError("age", "You're almost mature to use our service");
-                _logger.LogError("Invalid model state for the EnnployeeForCreationDto object");
-                return UnprocessableEntity(ModelState);
-            }
-
             var company = await _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
             if (company == null)
             {
@@ -129,21 +118,9 @@ namespace CompanyEmployees.Controllers
         }
 
         [HttpPut("{id}")]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<IActionResult> UpdateEmployeeForCompany(Guid companyId, Guid id, [FromBody]EmployeeForUpdateDto employee)
         {
-            if (employee is null)
-            {
-                _logger.LogError("EmployeeForUpdateDto object sent from client is null.");
-                return BadRequest("EmployeeForUpdateDto object is null");
-            }
-
-            if (!ModelState.IsValid)
-            {
-                ModelState.AddModelError("age", "You're almost mature to use our service");
-                _logger.LogError("Invalid model state for the EnnployeeForUpdateDto object");
-                return UnprocessableEntity(ModelState);
-            }
-
             var company = await _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
             if (company is null)
             {
