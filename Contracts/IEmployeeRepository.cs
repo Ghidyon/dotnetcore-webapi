@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entities.Models;
+using Entities.RequestFeatures;
 
 namespace Contracts
 {
     public interface IEmployeeRepository
     {
-        Task<IEnumerable<Employee>> GetEmployeesAsync(Guid companyId, bool trackChanges);
+        Task<IEnumerable<Employee>> GetEmployeesAsync(Guid companyId, EmployeeParameters parameters, bool trackChanges);
 
         Task<Employee> GetEmployeeAsync(Guid companyId, Guid employeeId, bool trackChanges);
 

@@ -9,6 +9,7 @@ using AutoMapper;
 using Entities.DataTransferObjects;
 using Microsoft.AspNetCore.JsonPatch;
 using CompanyEmployees.ActionFilters;
+using Entities.RequestFeatures;
 
 namespace CompanyEmployees.Controllers
 {
@@ -29,7 +30,7 @@ namespace CompanyEmployees.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetEmployeesForCompany(Guid companyId)
+        public async Task<IActionResult> GetEmployeesForCompany(Guid companyId, [FromQuery]EmployeeParameters parameters)
         {
             var company = await _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
 
@@ -39,7 +40,7 @@ namespace CompanyEmployees.Controllers
                 return NotFound();
             }
 
-            var employees = await _repository.Employee.GetEmployeesAsync(companyId, trackChanges: false);
+            var employees = await _repository.Employee.GetEmployeesAsync(companyId, parameters, trackChanges: false);
             var employeeDto = _mapper.Map<IEnumerable<EmployeeDto>>(employees);
             return Ok(employeeDto);
         }
