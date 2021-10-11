@@ -42,19 +42,13 @@ namespace CompanyEmployees.Controllers
         }
 
         [HttpGet("{id}", Name = "CompanyById")]
-        public async Task<IActionResult> GetCompany(Guid id)
+        [ServiceFilter(typeof(CompanyExistsAttribute))]
+        public IActionResult GetCompany(Guid id)
         {
-            var company = await _repository.Company.GetCompanyAsync(id, trackChanges: false);
-            if (company == null)
-            {
-                _logger.LogInfo($"Company with id: {id} doesn't exist in the database.");
-                return NotFound();
-            }
-            else
-            {
-                var companyDto = _mapper.Map<CompanyDto>(company);
-                return Ok(companyDto);
-            }
+            var company = HttpContext.Items["company"] as Company;
+            
+            var companyDto = _mapper.Map<CompanyDto>(company);
+            return Ok(companyDto);
         }
 
         [HttpPost]
@@ -113,14 +107,10 @@ namespace CompanyEmployees.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ServiceFilter(typeof(ValidateCompanyExistsAttribute))]
         public async Task<IActionResult> DeleteCompany(Guid id)
         {
-            var company = await _repository.Company.GetCompanyAsync(id, trackChanges: false);
-            if (company is null)
-            {
-                _logger.LogInfo($"Company with id: {id} doesn't exist in the database.");
-                return NotFound();
-            }
+            var company = HttpContext.Items["company"] as Company;
 
             _repository.Company.DeleteCompany(company);
             await _repository.SaveAsync();
@@ -130,15 +120,10 @@ namespace CompanyEmployees.Controllers
 
         [HttpPut("{id}")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
+        [ServiceFilter(typeof(ValidateCompanyExistsAttribute))]
         public async Task<IActionResult> UpdateCompany(Guid id, [FromBody]CompanyForUpdateDto company)
         {
-            var companyEntity = await _repository.Company.GetCompanyAsync(id, trackChanges: true);
-
-            if (companyEntity is null)
-            {
-                _logger.LogInfo($"Company with id: {id} doesn't exist in the database.");
-                return NotFound();
-            }
+            var companyEntity = HttpContext.Items["company"] as Company;
 
             _mapper.Map(company, companyEntity);
             await _repository.SaveAsync();

@@ -46,8 +46,11 @@ namespace CompanyEmployees
             .AddXmlDataContractSerializerFormatters()
             .AddCustomCSVFormatter();
 
-            //services.AddScoped<ValidationFilterAttribute>();
+            services.AddScoped<ValidationFilterAttribute>();
             services.AddScoped<ValidateCompanyExistsAttribute>();
+            services.AddScoped<ValidateEmployeeForCompanyExistsAttribute>();
+            services.AddScoped<CompanyExistsAttribute>();
+            services.AddScoped<EmployeeExistsAttribute>();
 
             services.AddAutoMapper(typeof(Startup));
 
