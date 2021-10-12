@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GZtX6hiEWEj3Zjhk0e1lQMBpaO9QwFdPsjpimGOMpdFQiCbvi9HHyPmUbZOtdJ3PxW12DzZJhOtrNAc66pnMwg==",
+  "dgSpecHash": "kMTk1BLQY50eBUPnXq3StouYunmJxLiJy22V7hu+c9WO0c7GNa8LqoCrTFwsCkaGWLpxZpAtsGFtJHzmd5C32w==",
   "success": true,
   "projectFilePath": "C:\\Users\\ghidyon\\source\\repos\\CompanyEmployees\\CompanyEmployees\\CompanyEmployees.csproj",
   "expectedPackageFiles": [
@@ -64,6 +64,7 @@
     "C:\\Users\\ghidyon\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\ghidyon\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\ghidyon\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\ghidyon\\.nuget\\packages\\system.linq.dynamic.core\\1.2.13\\system.linq.dynamic.core.1.2.13.nupkg.sha512",
     "C:\\Users\\ghidyon\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
     "C:\\Users\\ghidyon\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\ghidyon\\.nuget\\packages\\system.private.datacontractserialization\\4.3.0\\system.private.datacontractserialization.4.3.0.nupkg.sha512",

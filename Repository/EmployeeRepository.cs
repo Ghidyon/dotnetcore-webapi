@@ -23,13 +23,14 @@ namespace Repository
             var employees = await FindByCondition(e => e.CompanyId.Equals(companyId), trackChanges)
                 .FilterEmployees(parameters.MinAge, parameters.MaxAge)
                 .Search(parameters.SearchTerm)
-                .OrderBy(e => e.Name)
-                .Skip((parameters.PageNumber - 1) * parameters.PageSize)
-                .Take(parameters.PageSize)
+                .Sort(parameters.OrderBy)
+                //.Skip((parameters.PageNumber - 1) * parameters.PageSize)
+                //.Take(parameters.PageSize)
                 .ToListAsync();
 
-            var count = await FindByCondition(e => e.CompanyId.Equals(companyId), trackChanges).CountAsync();
-            return new PagedList<Employee>(employees, count, parameters.PageNumber, parameters.PageSize);
+            //var count = await FindByCondition(e => e.CompanyId.Equals(companyId), trackChanges).CountAsync();
+            //return new PagedList<Employee>(employees, count, parameters.PageNumber, parameters.PageSize);
+            return PagedList<Employee>.ToPagedList(employees, parameters.PageNumber, parameters.PageSize);
         }
 
         public async Task<Employee> GetEmployeeAsync(Guid companyId, Guid employeeId, bool trackChanges) =>

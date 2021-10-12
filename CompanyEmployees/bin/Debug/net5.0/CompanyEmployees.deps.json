@@ -971,6 +971,17 @@
           "System.Runtime.Extensions": "4.3.0"
         }
       },
+      "System.Linq.Dynamic.Core/1.2.13": {
+        "runtime": {
+          "lib/net5.0/System.Linq.Dynamic.Core.dll": {
+            "assemblyVersion": "1.2.13.0",
+            "fileVersion": "1.2.13.0"
+          }
+        },
+        "compile": {
+          "lib/net5.0/System.Linq.Dynamic.Core.dll": {}
+        }
+      },
       "System.Net.NameResolution/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -1369,7 +1380,8 @@
         "dependencies": {
           "Contracts": "1.0.0",
           "Entities": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.10"
+          "Microsoft.EntityFrameworkCore": "5.0.10",
+          "System.Linq.Dynamic.Core": "1.2.13"
         },
         "runtime": {
           "Repository.dll": {}
@@ -3491,6 +3503,13 @@
       "sha512": "sha512-5DbqIUpsDp0dFftytzuMmc0oeMdQwjcP/EWxsksIz/w1TcFRkZ3yKKz0PqiYFMmEwPSWw+qNVqD7PJ889JzHbw==",
       "path": "system.linq/4.3.0",
       "hashPath": "system.linq.4.3.0.nupkg.sha512"
+    },
+    "System.Linq.Dynamic.Core/1.2.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CFdyeLIp8SO12Mt4x87JKHdzKmxQxx7ccPYfwYcnyEqYAahBpCsqWgtPYvKVChsMC7z9XBLx9EKvA2j0qG4VcA==",
+      "path": "system.linq.dynamic.core/1.2.13",
+      "hashPath": "system.linq.dynamic.core.1.2.13.nupkg.sha512"
     },
     "System.Net.NameResolution/4.3.0": {
       "type": "package",

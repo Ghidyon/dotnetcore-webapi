@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3r3XsSd8r1c35RX0Eg6zccyE313oWbECrEa6TAIOCGYffSfnoTFeodVOorArxLjFvId3Xj/Vmksq9vpaVdia/A==",
+  "dgSpecHash": "ekrgRpt2XUt4T2LbC23yKv13zv+tqalpfqkpM4pSg6J3UBsFOlWJeCCVam8t2HiHs0QKeIW0f1VNOKb5OFjbBQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ghidyon\\source\\repos\\CompanyEmployees\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
@@ -17,7 +17,8 @@
     "C:\\Users\\ghidyon\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\ghidyon\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\ghidyon\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
-    "C:\\Users\\ghidyon\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
+    "C:\\Users\\ghidyon\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
+    "C:\\Users\\ghidyon\\.nuget\\packages\\system.linq.dynamic.core\\1.2.13\\system.linq.dynamic.core.1.2.13.nupkg.sha512"
   ],
   "logs": []
 }
